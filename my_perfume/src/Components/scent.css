@@ -36,56 +36,47 @@
 }
 .woody {
   /* border: solid 2px; */
-  width: 200px;
-  height: 250px;
+  width: 250px;
+  height: 300px;
 
 }
 .woody_img{
   border-radius: 70%;
 }
 .floral {
-  width: 200px;
-  height: 250px;
+  width: 250px;
+  height: 300px;
 
 }
 .floral_img{
   border-radius: 70%;
 }
 .spicy {
-  width: 200px;
-  height: 250px;
+  width: 250px;
+  height: 300px;
 }
 .spicy_img{
   border-radius: 70%;
 }
-.oriental {
-  width: 200px;
-  height: 250px;
-}
+
 .fruity {
   padding-left: 80px;
-  width: 200px;
-  height: 250px;
+  width: 250px;
+  height: 300px;
 }
 .fruity_img{
   border-radius: 70%;
 }
 .etc {
   padding-right:80px;
-  width: 200px;
-  height: 250px;
+  width: 250px;
+  height: 300px;
 }
 .etc_img{
   border-radius: 70%;
 }
-.citrus {
-  width: 200px;
-  height: 250px;
-}
-.musk {
-  width: 200px;
-  height: 250px;
-}
+
+
 .pb {
   display: flex;
   justify-content: center;

@@ -4,15 +4,15 @@
 .no1{
   margin:auto;
   display: flex;
-  justify-content: center;
-  border: solid 2px black;
-  width:85%;
+
+  /* border: solid 2px black; */
+  width:75%;
 
 }
 .no2{
   margin:auto;
   display: flex;
-  justify-content: center;
+  
   /* border: solid 2px black; */
   width:75%;
 }
@@ -20,7 +20,7 @@
   margin:auto;
 
   display: flex;
-  justify-content: center;
+
   /* border: solid 2px black; */
   width:75%;
 }
@@ -31,37 +31,39 @@
 }
 .test_inner {
   width: 90%;
-  border: solid 2px;
+  /* border: solid 2px; */
   justify-content: center;
   margin-bottom : 150px;
 }
 .img1{
   /* border : solid 2px; */
-  width:200px;
-  height:210px;
+  width:250px;
+  height:250px;
   align : left;
-
+  margin-left : 17%;
+  
   /* margin-left:20%; */
   
 }
 .img1_im{
- 
+  
   /* margin-top:5px; */
 
-  border: 2px solid black;
+  /* border: 2px solid black; */
   text-align:left;
   float: right;
 
-
-  /* margin-right:20%; */
-  padding-right: 50px;
+  padding-top : 2%;
+  margin-left:15%;
+  
 }
 
 .img2{
 
-  width:200px;
-  height:200px;
+  width:250px;
+  height:250px;
   align : left;
+  margin-left : 17%;
   /* margin-left:20%; */
   
 }
@@ -70,14 +72,16 @@
   margin-top:5px;
   float: right;
   text-align:left;
-  padding-right: 50px
+  padding-top : 2%;
+  margin-left:15%;
   /* margin-right:20%; */
 }
 
 .img3{
-  width:200px;
-  height:200px;
+  width:250px;
+  height:250px;
   align : left;
+  margin-left : 17%;
   /* margin-left:20%; */
   
   
@@ -86,7 +90,9 @@
   margin-top:5px;
   float: right;
   text-align:left;
-  padding-right: 50px
+  
+  padding-top : 2%;
+  margin-left:15%;
   /* margin-right:20%; */
 }
 html {
@@ -106,3 +112,4 @@ html {
 .tohome_btn{
   margin-top:50px;
 }
+

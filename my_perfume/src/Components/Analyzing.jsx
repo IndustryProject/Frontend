@@ -24,13 +24,14 @@ const Analyzing = () =>{
                     {analyzing_img}
                    
                 </div>
+                <br/>
                 <Link to="/result">
-                <button type="button" className = "toresult" onClick={()=>{
+                <button type="button" className = "start_btn custom-btn btn-8" onClick={()=>{
                 console.log("to result")
                 }}>
                     {/* <img className="img_btn" src="https://img.freepik.com/free-vector/play-button-on-white-background_97458-84.jpg?w=1380"/> */}
                 
-                결과를 확인하러 가기
+                <span className = "toresult">결과를 확인하러 가기</span>
             
                 </button>
             </Link>
