@@ -76,8 +76,8 @@ const Test = () => {
                             
                             src = {imageUrl1}
                             alt=""
-                            width = "200"
-                            height = "200"
+                            width = "250"
+                            height = "250"
                         ></img>
                     </div>
 
@@ -95,14 +95,15 @@ const Test = () => {
                 </div>
                 <br/>
                 <br/>
+                <br/>
                 <div className = "no2">
                 <div className = "img2">
                         <img
                             
                             src = {imageUrl2}
                             alt=""
-                            width = "200"
-                            height = "200"
+                            width = "250"
+                            height = "250"
                         ></img>
                     </div>
                     <div className = "img2_im">
@@ -117,14 +118,15 @@ const Test = () => {
                 </div>
                 <br/>
                 <br/>
+                <br/>
                 <div className = "no3">
                 <div className = "img3">
                         <img
                             
                             src = {imageUrl3}
                             alt=""
-                            width = "200"
-                            height = "200"
+                            width = "250"
+                            height = "250"
                         ></img>
                     </div>
                     <div className = "img3_im">

@@ -36,7 +36,7 @@
   overflow: hidden;
 }
 .q1_content {
-  margin-top: 8%;
+  margin-top: 6%;
   display: flex;
   justify-content: center;
   /* border: solid 2px; */
@@ -52,4 +52,5 @@
 .pb {
   display: flex;
   justify-content: center;
+  margin-top : 40px;
 }
