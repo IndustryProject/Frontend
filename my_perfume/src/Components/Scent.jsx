@@ -22,7 +22,7 @@ const Scent = () =>{
     return(
         <div className = "scent_outer">
             <div className = "scent_inner">
-                <div className = "q2"> 어떤 향기를 좋아하시나요? </div>
+                <div className = "q2"> What kind of scent do you like? </div>
                 <div className = "q2_content">
                 <div className ="content_1">
                     <Link to = "/daynight">
@@ -37,7 +37,7 @@ const Scent = () =>{
                             height = "80%"
                             >
                             </img>
-                            우디향
+                            woody
                     
                         </div>
                     </Link>
@@ -52,7 +52,7 @@ const Scent = () =>{
                             height = "80%"
                             >
                             </img>
-                            플로럴 향
+                            floral
                         </div>
                     </Link>
                     <Link to = "/daynight">
@@ -66,7 +66,7 @@ const Scent = () =>{
                             height = "80%"
                             >
                             </img>
-                            스파이시 향
+                            spicy
                         </div>
                     </Link>
 
@@ -75,7 +75,7 @@ const Scent = () =>{
                 <div className ="content_2">
                     <Link to = "/daynight">
                         <div className = "fruity" onClick = {()=>{console.log("fruity")
-                            postdata(5)
+                            postdata(4)
                             }}>
                             <img
                             className = "fruity_img"
@@ -84,13 +84,13 @@ const Scent = () =>{
                             height = "80%"
                             >
                             </img>
-                            프루티 향
+                            fruity
                     
                         </div>
                     </Link>
                     <Link to = "/daynight">
                         <div className = "etc" onClick = {()=>{console.log("fresh")
-                            postdata(6)
+                            postdata(5)
                             }}>
                             <img
                             className = "etc_img"
@@ -99,7 +99,7 @@ const Scent = () =>{
                             height = "80%"
                             >
                             </img>
-                            나머지 향
+                            etc
                         </div>
                     </Link>
 

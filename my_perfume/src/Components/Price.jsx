@@ -69,7 +69,7 @@ const Price = () =>{
     return(
         <div className= "price_outer">
             <div className = "price_inner">
-                <div className = "q3">가격대를 고르세요</div>
+                <div className = "q3">Pick a price range</div>
                 
                 <form className="form" 
                         
@@ -91,7 +91,7 @@ const Price = () =>{
                     <input type = "radio" id = "five" name = "price" value = "5"required/>
                     <label htmlFor = "five">240000</label><br/>
                     {/* <Link to = "/Daynight"> */}
-                    <input type = "submit" value = "다음으로" onClick ={function(event){
+                    <input type = "submit" value = "submit" onClick ={function(event){
                         console.log("click")
                        
                         

@@ -1,0 +1,12 @@
+.loading_div{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, #e1bee7, #b2ebf2);
+   
+    background-size: cover;
+}
+
+.spinner-border{
+    width : 10rem;
+    height : 10rem;
+}

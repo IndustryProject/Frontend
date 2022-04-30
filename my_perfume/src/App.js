@@ -8,6 +8,7 @@ import Daynight from './Components/Daynight';
 import Blank from './Components/Blank';
 import Analyzing from './Components/Analyzing';
 import Test from './Components/Test';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 // import ProgressBar from './Components/ProgressBar';
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";

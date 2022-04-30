@@ -18,28 +18,35 @@ const Analyzing = () =>{
     return ready?<Loading/>:(
         <div className = "analyzing_outer">
             <div className = "analyzing_inner">
-                <div className = "analyzing_title">당신의 결과를 분석중입니다.</div>
+                <div className = "analyzing_title">Result Analysis Completed</div>
                 <br/>
-                <div className = "analyzing_img">
+                <div>
+                Your taste analysis has been completed
+                <br/>
+                Check out the perfume that suits your taste
+                <br/>
+                </div>
+                {/* <div className = "analyzing_img">
                     {analyzing_img}
                    
-                </div>
+                </div> */}
                 <br/>
-                <Link to="/result">
+                <div className = "pb">
+            <ProgressBar width={400} percent={1} pre = {0.8}/>
+            </div>
+                <Link to="/test">
                 <button type="button" className = "start_btn custom-btn btn-8" onClick={()=>{
                 console.log("to result")
                 }}>
                     {/* <img className="img_btn" src="https://img.freepik.com/free-vector/play-button-on-white-background_97458-84.jpg?w=1380"/> */}
                 
-                <span className = "toresult">결과를 확인하러 가기</span>
+                <span className = "toresult">only your perfume</span>
             
                 </button>
             </Link>
             <br/>
             <br/>
-            <div className = "pb">
-            <ProgressBar width={400} percent={1} pre = {0.8}/>
-            </div>
+
                 {/* <div className="div">
                 <ProgressBar width={400} percent={this.state.percent} />
             <button
