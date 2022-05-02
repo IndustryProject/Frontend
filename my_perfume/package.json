@@ -11,9 +11,10 @@
     "framer-motion": "^6.2.9",
     "http-proxy-middleware": "^2.0.4",
     "react": "^17.0.2",
-    "react-bootstrap": "^2.2.3",
+    "react-bootstrap": "^2.3.1",
     "react-dom": "^17.0.2",
     "react-hook-use-state": "^1.1.0",
+    "react-loader-spinner": "^6.0.0-0",
     "react-native": "^0.67.4",
     "react-native-web": "^0.17.7",
     "react-router": "^6.2.2",
@@ -27,7 +28,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "aws s3 sync ./build s3://perfume0430 --profile=howon",
+    "invalidate": "aws cloudfront create-invalidation --profil=howon --distribution-id E1MROGA5WTV00Y --paths /*"
   },
   "eslintConfig": {
     "extends": [

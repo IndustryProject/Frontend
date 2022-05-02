@@ -36,7 +36,7 @@ const Main = () =>{
             {/* </img> */}
             <br></br>
             <div className="container ">
-                <Link to="/Firstquestion">
+                <Link to="/firstquestion">
                 <button type="button" className = "start_btn custom-btn btn-8" onClick={()=>{
                     console.log("click")
                 }}>
