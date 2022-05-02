@@ -5,15 +5,19 @@ import {View,Text,StyleSheet} from 'react-native';
 const Loading = () =>{
      return(
           <div className = "loading_div">
-               
+               <div className= "content">
+                    
                <div className = "comment">
-               당신의 향수를 분석 중입니다!
+               we're analyzing your perfume!
                </div>
                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></link>
-               <div className="spinner-border"  role="status">
-               <span className="visually-hidden">Loading...</span>
+               <div className="spinner-border" style={{width:'5rem',height:'5rem'}} role="status">
+               <span className="visually-hidden">Loading</span>
                </div>
-
+               <div>
+                    wait a few seconds!
+               </div>
+               </div>
           </div>
      );
           

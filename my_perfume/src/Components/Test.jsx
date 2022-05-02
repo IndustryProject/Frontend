@@ -28,13 +28,20 @@ const Test = () => {
     const [scent3, setscent3] = useState("");
     const [concentration3, setconcentration3] = useState("");
     const [imageUrl3, seturl3] = useState("");
+    const [add_image1,setaddimage1] = useState("");
+    const [add_image2,setaddimage2] = useState("");
     useEffect(()=>{
         // axios.get('https://jsonplaceholder.typicode.com/users')
         // .then(response =>{
         // {/*'https://jsonplaceholder.typicode.com/users'*/}
         //     setUsers(response.data);
         // });
-        axios.get('/filtering',
+        axios.get('/filtering?standard=2').then(response=>{
+            console.log(response.data)
+            setaddimage1(response.data[0].imgUrl);
+            setaddimage2(response.data[1].imgUrl);
+        })
+        axios.get('/filtering?standard=1',
         {
           headers:
           { 
@@ -137,6 +144,33 @@ const Test = () => {
                         미들 노트 : {middlenote3}<br/>
                     </div>
 
+                </div>
+                
+                <div className="add_content">
+                <div className = "add_comment"> How about this kind of perfume?</div>
+                <br/>
+                <div>
+                <div className = "add1">
+                <Link to="/add">
+                    <img
+                    src = {add_image1}
+                    width = "100"
+                    height = "100"
+                    >
+                    </img>
+                </Link>
+                </div>
+                <div className = "add2">
+                <Link to="/add">
+                <img
+                    src = {add_image2}
+                    width = "100"
+                    height = "100"
+                    >
+                    </img>
+                    </Link>
+                </div>
+                </div>
                 </div>
                 <div className = "tohome_btn">
                 <Link to="/">
