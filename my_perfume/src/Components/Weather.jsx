@@ -23,13 +23,18 @@ function requestCoords(){
     navigator.geolocation.getCurrentPosition(handleGeoSucc, handleGeoErr);
 }
 function getWeather(lat, lon){
-    fetch('https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid={1a61af595bccebe4ba2d0297d1ed90b3}')
+    console.log(lat)
+    const url = 'https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&appid=318cb7b0cfdf9288f32ae1d228a2a4f0'
+    // fetch('https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid={cbd6abd76c820fd3522b9ed600fe694d}')
+    fetch(url)
+    
     .then(res => res.json())
     .then(data =>{
         console.log(data);
-        const temp = data.main.temp;
+        const temp = (data.main.temp-273.15)*100;
         const weathers = data.weather[data.weather.length -1];
-        setTemp(temp);
+        setTemp(Math.round(temp)/100);
+        
         setWeather(weathers.main);
     })
 }
@@ -39,7 +44,10 @@ useEffect(()=>{
 
 return(
     <div>
-        a
+        
+        temp:{temp}
+        <br/><br/>
+        weather:{weather}
     </div>
 )
 

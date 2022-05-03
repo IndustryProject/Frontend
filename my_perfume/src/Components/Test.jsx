@@ -1,11 +1,17 @@
 import React, {useEffect, useState} from 'react';
+
 import "./test.css";
 import {Link} from "react-router-dom";
 import axios from 'axios';
 import Imf from './Imf';
+import greystar from '../img/greystar.jpg';
+import bluestar from '../img/bluestar.png';
+const greystar_img = <img src={greystar}/>;
+
 
 
 const Test = () => {
+
     const[perfumes, setPerfumes] = useState("");
     const [basenote1, setbasenote1] = useState("");
     const [brand1, setbrand1] = useState("");
@@ -30,6 +36,7 @@ const Test = () => {
     const [imageUrl3, seturl3] = useState("");
     const [add_image1,setaddimage1] = useState("");
     const [add_image2,setaddimage2] = useState("");
+
     useEffect(()=>{
         // axios.get('https://jsonplaceholder.typicode.com/users')
         // .then(response =>{
@@ -78,7 +85,7 @@ const Test = () => {
                 <div className = "result">Perfume for you</div>
                 <div className = "test_all">
                 <div className = "no1">
-                <div className = "img1">
+                    <div className = "img1">
                         <img
                             
                             src = {imageUrl1}
@@ -94,6 +101,62 @@ const Test = () => {
                         밤낮 : {concentration1}<br/><br/>
                         베이스 노트 : {basenote1}<br/><br/>
                         미들 노트 : {middlenote1}<br/>
+                        <form
+                        onSubmit={function(event){
+                            event.preventDefault();
+                            console.log(event.target.star3.value);
+                            // setstar3(event.target);
+                            // handleSubmit(event);
+                        }}     
+                        >
+                        <div className="startRadio">
+                        <label className="startRadio__box">
+                            <input type="radio" name="star1" value = "0.5" id=""/>
+                            <span className="startRadio__img"><span className="blind">별 0.5개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star1" value = "1"id=""/>
+                            <span className="startRadio__img"><span className="blind">별 1개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star1" value = "1.5"id=""/>
+                            <span className="startRadio__img"><span className="blind">별 1.5개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star1" value = "2"id=""/>
+                            <span className="startRadio__img"><span className="blind">별 2개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star1" value = "2.5" id=""/>
+                            <span className="startRadio__img"><span className="blind">별 2.5개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star1" value = "3" id=""/>
+                            <span className="startRadio__img"><span className="blind">별 3개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star1" value = "3.5" id=""/>
+                            <span className="startRadio__img"><span className="blind">별 3.5개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star1" value = "4" id=""/>
+                            <span className="startRadio__img"><span className="blind">별 4개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star1" value = "4.5" id=""/>
+                            <span className="startRadio__img"><span className="blind">별 4.5개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star1" value = "5" id=""/>
+                            <span className="startRadio__img"><span className="blind">별 5개</span></span>
+                        </label>
+                        <input type = "submit" value = "submit" className = "btn" onClick ={function(event){
+                        console.log("click")
+
+                        
+                    }}/>
+                        </div>
+                        </form>
                     </div>
                     
 
@@ -119,7 +182,62 @@ const Test = () => {
                         밤낮 : {concentration2}<br/><br/>
                         베이스 노트 : {basenote2}<br/><br/>
                         미들 노트 : {middlenote2}<br/>
+                        <form
+                        onSubmit={function(event){
+                            event.preventDefault();
+                            console.log(event.target.star3.value);
+                            // setstar3(event.target);
+                            // handleSubmit(event);
+                        }}     
+                        >
+                        <div className="startRadio">
+                        <label className="startRadio__box">
+                            <input type="radio" name="star2" value = "0.5" id=""/>
+                            <span className="startRadio__img"><span className="blind">별 0.5개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star2" value = "1"id=""/>
+                            <span className="startRadio__img"><span className="blind">별 1개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star2" value = "1.5"id=""/>
+                            <span className="startRadio__img"><span className="blind">별 1.5개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star2" value = "2"id=""/>
+                            <span className="startRadio__img"><span className="blind">별 2개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star2" value = "2.5" id=""/>
+                            <span className="startRadio__img"><span className="blind">별 2.5개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star2" value = "3" id=""/>
+                            <span className="startRadio__img"><span className="blind">별 3개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star2" value = "3.5" id=""/>
+                            <span className="startRadio__img"><span className="blind">별 3.5개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star2" value = "4" id=""/>
+                            <span className="startRadio__img"><span className="blind">별 4개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star2" value = "4.5" id=""/>
+                            <span className="startRadio__img"><span className="blind">별 4.5개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star2" value = "5" id=""/>
+                            <span className="startRadio__img"><span className="blind">별 5개</span></span>
+                        </label>
+                        <input type = "submit" value = "submit" className = "btn" onClick ={function(event){
+                        console.log("click")
 
+                        
+                    }}/>
+                        </div>
+                        </form>
                     </div>
 
                 </div>
@@ -142,6 +260,62 @@ const Test = () => {
                         밤낮 : {concentration3}<br/><br/>
                         베이스 노트 : {basenote3}<br/><br/>
                         미들 노트 : {middlenote3}<br/>
+                        <form
+                        onSubmit={function(event){
+                            event.preventDefault();
+                            console.log(event.target.star3.value);
+                            // setstar3(event.target);
+                            // handleSubmit(event);
+                        }}     
+                        >
+                        <div className="startRadio">
+                        <label className="startRadio__box">
+                            <input type="radio" name="star3" value = "0.5" id=""/>
+                            <span className="startRadio__img"><span className="blind">별 0.5개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star3" value = "1"id=""/>
+                            <span className="startRadio__img"><span className="blind">별 1개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star3" value = "1.5"id=""/>
+                            <span className="startRadio__img"><span className="blind">별 1.5개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star3" value = "2"id=""/>
+                            <span className="startRadio__img"><span className="blind">별 2개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star3" value = "2.5" id=""/>
+                            <span className="startRadio__img"><span className="blind">별 2.5개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star3" value = "3" id=""/>
+                            <span className="startRadio__img"><span className="blind">별 3개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star3" value = "3.5" id=""/>
+                            <span className="startRadio__img"><span className="blind">별 3.5개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star3" value = "4" id=""/>
+                            <span className="startRadio__img"><span className="blind">별 4개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star3" value = "4.5" id=""/>
+                            <span className="startRadio__img"><span className="blind">별 4.5개</span></span>
+                        </label>
+                        <label className="startRadio__box">
+                            <input type="radio" name="star3" value = "5" id=""/>
+                            <span className="startRadio__img"><span className="blind">별 5개</span></span>
+                        </label>
+                        <input type = "submit" value = "submit" className = "btn" onClick ={function(event){
+                        console.log("click")
+
+                        
+                    }}/>
+                        </div>
+                        </form>
                     </div>
 
                 </div>
@@ -186,6 +360,9 @@ const Test = () => {
                 </Link>
                 </div>
             </div>
+            
+
+            
             {/* <Imf users={users}/> */}
             {/* {perfumes&&perfumes.map(perfumes=>(
                 <div className = "per" key = {perfumes.name}>
