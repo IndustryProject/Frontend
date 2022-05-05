@@ -9,6 +9,7 @@ import Blank from './Components/Blank';
 import Analyzing from './Components/Analyzing';
 import Test from './Components/Test';
 import Add from './Components/Add';
+import Add2 from './Components/Add2';
 import Weather from './Components/Weather';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import ProgressBar from './Components/ProgressBar';
@@ -45,6 +46,7 @@ function App() {
       <Route exact path="/test" element={<Test />} />
       <Route exact path="/" element={<Main />} />
       <Route exact path="/add" element={<Add />} />
+      <Route exact path="/add2" element={<Add2 />} />
       <Route exact path="/Weather" element={<Weather />} />
       {/* <Route exact path="/ProgressBar" element={<ProgressBar />} /> */}
       

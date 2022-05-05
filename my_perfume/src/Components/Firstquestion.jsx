@@ -49,6 +49,24 @@ const Firstquestion = () =>{
                 {female_img}
                 </div>
                 </Link>
+
+                <Link to="/scent">
+                <div className = "gender_img" onClick = {()=>{
+                    console.log("click without gender")
+                    
+                    
+                    // console.log(fq)
+                    postdata(3)
+                }}>
+                <img
+                src = "https://png.pngtree.com/png-vector/20191201/ourmid/pngtree-male-and-female-gender-signs-icon-circle-png-image_2060974.jpg"
+                width = "100%"
+                height = "100%"
+                >
+                </img>
+                </div>
+                </Link>
+                
                 <Link to="/scent">
                 <div className = "male_img" onClick = {()=>{
                     console.log("click male")
