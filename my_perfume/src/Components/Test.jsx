@@ -11,6 +11,38 @@ const greystar_img = <img src={greystar}/>;
 
 
 const Test = () => {
+    let addCheck1 = "off"
+    let addCheck2 = "off"
+    const add = (num) =>{
+        if(addCheck1=="off" && addCheck2=="off" && num == 1){
+            document.getElementsByClassName("iframe2")[0].style.display = "none";
+            document.getElementsByClassName("iframe1")[0].style.display = "block";
+            addCheck1 = "on"
+        }
+        else if(addCheck1=="off" && addCheck2=="off" && num == 2){
+            document.getElementsByClassName("iframe1")[0].style.display = "none";
+            document.getElementsByClassName("iframe2")[0].style.display = "block";
+            addCheck2 = "on"
+        }
+        else if(addCheck1=="on" && addCheck2=="off" && num == 2){
+            document.getElementsByClassName("iframe1")[0].style.display = "none";
+            document.getElementsByClassName("iframe2")[0].style.display = "block";
+            addCheck1 = "off"
+            addCheck2 = "on"
+        }
+        else if(addCheck1=="off" && addCheck2=="on" && num == 1){
+            document.getElementsByClassName("iframe2")[0].style.display = "none";
+            document.getElementsByClassName("iframe1")[0].style.display = "block";
+            addCheck1 = "on"
+            addCheck2 = "off"
+        }
+        else{
+            document.getElementsByClassName("iframe1")[0].style.display = "none";
+            document.getElementsByClassName("iframe2")[0].style.display = "none";
+            addCheck1 = "off"
+            addCheck2 = "off"
+        }
+    }
 
     const[perfumes, setPerfumes] = useState("");
     const [basenote1, setbasenote1] = useState("");
@@ -324,7 +356,8 @@ const Test = () => {
                 <div className = "add_comment"> How about this kind of perfume?</div>
                 <br/>
                 <div>
-                <div className = "add1">
+
+                {/*<div className = "add1">
                 <Link to="/add">
                     <img
                     src = {add_image1}
@@ -333,8 +366,31 @@ const Test = () => {
                     >
                     </img>
                 </Link>
+                </div>*/}
+                
+                <div className = "add1" onClick = {()=>{
+                    add(1)
+                }}>
+                <img
+                    src = {add_image1}
+                    width = "100"
+                    height = "100"
+                    >
+                    </img>
                 </div>
-                <div className = "add2">
+
+                <div className = "add2" onClick = {()=>{
+                    add(2)
+                }}>
+                <img
+                    src = {add_image2}
+                    width = "100"
+                    height = "100"
+                    >
+                    </img>
+                </div>
+                
+                {/*<div className = "add2">
                 <Link to="/add">
                 <img
                     src = {add_image2}
@@ -343,9 +399,13 @@ const Test = () => {
                     >
                     </img>
                     </Link>
+                </div>*/}
+
                 </div>
                 </div>
-                </div>
+                <br/><br/>
+                <iframe className="iframe1" width="800" height="500" frameborder="1" scrolling="no" src="http://localhost:3000/add">로딩 불가 메세지</iframe>
+                <iframe className="iframe2" width="800" height="500" frameborder="1" scrolling="no" src="http://localhost:3000/add2">로딩 불가 메세지</iframe>
                 <div className = "tohome_btn">
                 <Link to="/">
                 
