@@ -2,6 +2,10 @@ import React from 'react';
 import "./main.css";
 import {Link} from "react-router-dom" 
 import { motion , AnimatePresence} from "framer-motion"
+<<<<<<< HEAD
+import Weather from "./Weather";
+=======
+>>>>>>> dd5ace9e48ea53b249aa846e6d15ee2fb3d317d1
 const Main = () =>{
     const variants = {
         
@@ -14,9 +18,17 @@ const Main = () =>{
         
         <div >
             
+<<<<<<< HEAD
+           
+            <div className = "main_title">PERFUME</div>
+            <div className = "weather">
+            <Weather/>
+            </div>
+=======
 
             <div className = "main_title">PERFUME</div>
             
+>>>>>>> dd5ace9e48ea53b249aa846e6d15ee2fb3d317d1
             <AnimatePresence>
                 <motion.div>
             <motion.img

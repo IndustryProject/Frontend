@@ -1,0 +1,38 @@
+.season_outer {
+    display: flex;
+    justify-content: center;
+}
+.season_inner {
+    width: 80%;
+  
+
+    border: solid 2px;
+}
+.spring{
+    border:solid 2px;
+    width: 150px;
+    height:150px;
+}
+.summer{
+    border:solid 2px;
+    width: 150px;
+    height:150px;
+}
+.autumn{
+    border:solid 2px;
+    width: 150px;
+    height:150px;
+}
+.winter{
+    border:solid 2px;
+    width: 150px;
+    height:150px;
+}
+.four_season{
+    border:solid 2px;
+    width: 150px;
+    height:150px;
+}
+.four{
+    justify-content: space-evenly;
+}

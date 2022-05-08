@@ -93,6 +93,26 @@ const Test = () => {
             setname1(response.data[0].name);
             setbasenote1(response.data[0].base_note);
             setbrand1(response.data[0].brand);
+<<<<<<< HEAD
+            setmiddlenote1(response.data[0].middleNote);
+            setconcentration1(response.data[0].longevityRating);
+            seturl1(response.data[0].imageUrl);
+            setscent1(response.data[0].scent);
+            setname2(response.data[1].name);
+            setbasenote2(response.data[1].base_note);
+            setbrand2(response.data[1].brand);
+            setmiddlenote2(response.data[1].middleNote);
+            setconcentration2(response.data[1].longevityRating);
+            seturl2(response.data[1].imageUrl);
+            setscent2(response.data[1].scent);
+            setname3(response.data[2].name);
+            setbasenote3(response.data[2].base_note);
+            setbrand3(response.data[2].brand);
+            setmiddlenote3(response.data[2].middleNote);
+            setconcentration3(response.data[2].longevityRating);
+            seturl3(response.data[2].imageUrl);
+            setscent3(response.data[2].scent);
+=======
             setmiddlenote1(response.data[0].middle_note);
             setconcentration1(response.data[0].concentration);
             seturl1(response.data[0].imgUrl);
@@ -108,6 +128,7 @@ const Test = () => {
             setmiddlenote3(response.data[2].middle_note);
             setconcentration3(response.data[2].concentration);
             seturl3(response.data[2].imgUrl);
+>>>>>>> dd5ace9e48ea53b249aa846e6d15ee2fb3d317d1
 
         });
     },[]);
@@ -133,6 +154,9 @@ const Test = () => {
                         밤낮 : {concentration1}<br/><br/>
                         베이스 노트 : {basenote1}<br/><br/>
                         미들 노트 : {middlenote1}<br/>
+<<<<<<< HEAD
+                        
+=======
                         <form
                         onSubmit={function(event){
                             event.preventDefault();
@@ -189,6 +213,7 @@ const Test = () => {
                     }}/>
                         </div>
                         </form>
+>>>>>>> dd5ace9e48ea53b249aa846e6d15ee2fb3d317d1
                     </div>
                     
 
@@ -214,6 +239,9 @@ const Test = () => {
                         밤낮 : {concentration2}<br/><br/>
                         베이스 노트 : {basenote2}<br/><br/>
                         미들 노트 : {middlenote2}<br/>
+<<<<<<< HEAD
+                        
+=======
                         <form
                         onSubmit={function(event){
                             event.preventDefault();
@@ -270,6 +298,7 @@ const Test = () => {
                     }}/>
                         </div>
                         </form>
+>>>>>>> dd5ace9e48ea53b249aa846e6d15ee2fb3d317d1
                     </div>
 
                 </div>
@@ -292,7 +321,19 @@ const Test = () => {
                         밤낮 : {concentration3}<br/><br/>
                         베이스 노트 : {basenote3}<br/><br/>
                         미들 노트 : {middlenote3}<br/>
+<<<<<<< HEAD
+                        
+                    </div>
+
+                </div>
+                <div className="starrate" >
+                Please tell me your rating on these perfumes
+                <br/>
+                <form
+                        
+=======
                         <form
+>>>>>>> dd5ace9e48ea53b249aa846e6d15ee2fb3d317d1
                         onSubmit={function(event){
                             event.preventDefault();
                             console.log(event.target.star3.value);
@@ -348,10 +389,14 @@ const Test = () => {
                     }}/>
                         </div>
                         </form>
+<<<<<<< HEAD
+                        </div>
+=======
                     </div>
 
                 </div>
                 
+>>>>>>> dd5ace9e48ea53b249aa846e6d15ee2fb3d317d1
                 <div className="add_content">
                 <div className = "add_comment"> How about this kind of perfume?</div>
                 <br/>

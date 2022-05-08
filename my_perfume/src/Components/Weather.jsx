@@ -46,7 +46,11 @@ return(
     <div>
         
         temp:{temp}
+<<<<<<< HEAD
+
+=======
         <br/><br/>
+>>>>>>> dd5ace9e48ea53b249aa846e6d15ee2fb3d317d1
         weather:{weather}
     </div>
 )

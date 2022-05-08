@@ -29,7 +29,11 @@ const Daynight = () =>{
             <div className = "daynight_inner">
                 <div className = "q4">Day or Night?</div>
                 <div className = "q4_content">
+<<<<<<< HEAD
+                <Link to="/season">
+=======
                 <Link to="/price">
+>>>>>>> dd5ace9e48ea53b249aa846e6d15ee2fb3d317d1
                 <div className = "day_img" onClick = {()=>{
                     setTimeout(()=>console.log("delay"),1000)
                     console.log("day")
@@ -45,7 +49,11 @@ const Daynight = () =>{
                 </img>
                 </div>
                 </Link>
+<<<<<<< HEAD
+                <Link to="/season">
+=======
                 <Link to="/price">
+>>>>>>> dd5ace9e48ea53b249aa846e6d15ee2fb3d317d1
                 <div className = "night_img" onClick = {()=>{
                     console.log("night")
                     // handleClick("night")

@@ -144,7 +144,11 @@ html {
 }
 .add_content{
   justify-content: center;
+<<<<<<< HEAD
+  margin-top:2%;
+=======
   margin-top:7%;
+>>>>>>> dd5ace9e48ea53b249aa846e6d15ee2fb3d317d1
   display: grid;
   /* border : solid 2px; */
 }
@@ -154,7 +158,13 @@ html {
   height:2vh;
 }
 
+<<<<<<< HEAD
+.starrate{
+  margin-top:2%;
+}
+=======
 
+>>>>>>> dd5ace9e48ea53b249aa846e6d15ee2fb3d317d1
 .blind {
   position: absolute;
   overflow: hidden;
