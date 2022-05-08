@@ -100,7 +100,8 @@ html {
   height: auto;
   min-height: 100%;
   background-image: linear-gradient(to bottom right, #e1bee7, #b2ebf2);
- 
+  font-weight: bold;
+  
   background-size: cover;
 }
 
@@ -222,4 +223,14 @@ html {
 .iframe2{
   display: none;
   margin:auto;
+}
+
+.buyPerfume{
+  margin-top: 100px;
+  margin-left: 200px;
+  position: static;
+  display: flex;
+  float: right;
+  text-decoration-line: none;
+  color: rgb(255, 255, 255);
 }

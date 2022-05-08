@@ -50,24 +50,28 @@ const Test = () => {
     const [middlenote1, setmiddlenote1] = useState("");
     const [name1, setname1] = useState("");
     const [scent1, setscent1] = useState("");
-    const [concentration1, setconcentration1] = useState("");
+    const [longevityRating1, setlongevityRating1] = useState("");
     const [imageUrl1, seturl1] = useState("");
+    const [buyUrl1, setbuyurl1] = useState("");
     const [basenote2, setbasenote2] = useState("");
     const [brand2, setbrand2] = useState("");
     const [middlenote2, setmiddlenote2] = useState("");
     const [name2, setname2] = useState("");
     const [scent2, setscent2] = useState("");
-    const [concentration2, setconcentration2] = useState("");
+    const [longevityRating2, setlongevityRating2] = useState("");
     const [imageUrl2, seturl2] = useState("");
+    const [buyUrl2, setbuyurl2] = useState("");
     const [basenote3, setbasenote3] = useState("");
     const [brand3, setbrand3] = useState("");
     const [middlenote3, setmiddlenote3] = useState("");
     const [name3, setname3] = useState("");
     const [scent3, setscent3] = useState("");
-    const [concentration3, setconcentration3] = useState("");
+    const [longevityRating3, setlongevityRating3] = useState("");
     const [imageUrl3, seturl3] = useState("");
+    const [buyUrl3, setbuyurl3] = useState("");
     const [add_image1,setaddimage1] = useState("");
     const [add_image2,setaddimage2] = useState("");
+    
 
     useEffect(()=>{
         // axios.get('https://jsonplaceholder.typicode.com/users')
@@ -77,8 +81,8 @@ const Test = () => {
         // });
         axios.get('/filtering?standard=2').then(response=>{
             console.log(response.data)
-            setaddimage1(response.data[0].imgUrl);
-            setaddimage2(response.data[1].imgUrl);
+            setaddimage1(response.data[0].imageUrl);
+            setaddimage2(response.data[1].imageUrl);
         })
         axios.get('/filtering?standard=1',
         {
@@ -93,22 +97,24 @@ const Test = () => {
             setname1(response.data[0].name);
             setbasenote1(response.data[0].baseNote);
             setbrand1(response.data[0].brand);
-            setmiddlenote1(response.data[0].middle_note);
-            setconcentration1(response.data[0].concentration);
-            seturl1(response.data[0].imgUrl);
+            setmiddlenote1(response.data[0].middleNote);
+            setlongevityRating1(response.data[0].longevityRating);
+            seturl1(response.data[0].imageUrl);
+            setbuyurl1(response.data[0].buyUrl);
             setname2(response.data[1].name);
             setbasenote2(response.data[1].baseNote);
             setbrand2(response.data[1].brand);
-            setmiddlenote2(response.data[1].middle_note);
-            setconcentration2(response.data[1].concentration);
-            seturl2(response.data[1].imgUrl);
+            setmiddlenote2(response.data[1].middleNote);
+            setlongevityRating2(response.data[1].longevityRating);
+            seturl2(response.data[1].imageUrl);
+            setbuyurl2(response.data[1].buyUrl);
             setname3(response.data[2].name);
             setbasenote3(response.data[2].baseNote);
             setbrand3(response.data[2].brand);
-            setmiddlenote3(response.data[2].middle_note);
-            setconcentration3(response.data[2].concentration);
-            seturl3(response.data[2].imgUrl);
-
+            setmiddlenote3(response.data[2].middleNote);
+            setlongevityRating3(response.data[2].longevityRating);
+            seturl3(response.data[2].imageUrl);
+            setbuyurl3(response.data[2].buyUrl);
         });
     },[]);
     return(
@@ -130,7 +136,7 @@ const Test = () => {
                     <div className = "img1_im">
                         이름 : {name1}<br/><br/>
                         브랜드 : {brand1}<br/><br/>
-                        밤낮 : {concentration1}<br/><br/>
+                        지속시간 : {longevityRating1}<br/><br/>
                         베이스 노트 : {basenote1}<br/><br/>
                         미들 노트 : {middlenote1}<br/>
                         <form
@@ -191,10 +197,11 @@ const Test = () => {
                         </form>
                     </div>
                     
-
                     
-                  
+                    
+                    <div><a href={buyUrl1} target='_blank' class="buyPerfume">go</a></div>
                 </div>
+                
                 <br/>
                 <br/>
                 <br/>
@@ -211,7 +218,7 @@ const Test = () => {
                     <div className = "img2_im">
                         이름 : {name2}<br/><br/>
                         브랜드 : {brand2}<br/><br/>
-                        밤낮 : {concentration2}<br/><br/>
+                        지속시간 : {longevityRating2}<br/><br/>
                         베이스 노트 : {basenote2}<br/><br/>
                         미들 노트 : {middlenote2}<br/>
                         <form
@@ -271,7 +278,7 @@ const Test = () => {
                         </div>
                         </form>
                     </div>
-
+                    <div><a href={buyUrl2} target='_blank' class="buyPerfume">go</a></div>
                 </div>
                 <br/>
                 <br/>
@@ -289,7 +296,7 @@ const Test = () => {
                     <div className = "img3_im">
                         이름 : {name3}<br/><br/>
                         브랜드 : {brand3}<br/><br/>
-                        밤낮 : {concentration3}<br/><br/>
+                        지속시간 : {longevityRating3}<br/><br/>
                         베이스 노트 : {basenote3}<br/><br/>
                         미들 노트 : {middlenote3}<br/>
                         <form
@@ -349,7 +356,7 @@ const Test = () => {
                         </div>
                         </form>
                     </div>
-
+                    <div><a href={buyUrl3} target='_blank' class="buyPerfume">go</a></div>
                 </div>
                 
                 <div className="add_content">
