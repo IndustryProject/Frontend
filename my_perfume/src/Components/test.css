@@ -145,7 +145,7 @@ html {
 }
 .add_content{
   justify-content: center;
-  margin-top:7%;
+  margin-top:2%;
   display: grid;
   /* border : solid 2px; */
 }
@@ -155,6 +155,9 @@ html {
   height:2vh;
 }
 
+.starrate{
+  margin-top:4%;
+}
 
 .blind {
   position: absolute;

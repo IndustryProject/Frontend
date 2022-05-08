@@ -139,62 +139,7 @@ const Test = () => {
                         지속시간 : {longevityRating1}<br/><br/>
                         베이스 노트 : {basenote1}<br/><br/>
                         미들 노트 : {middlenote1}<br/>
-                        <form
-                        onSubmit={function(event){
-                            event.preventDefault();
-                            console.log(event.target.star3.value);
-                            // setstar3(event.target);
-                            // handleSubmit(event);
-                        }}     
-                        >
-                        <div className="startRadio">
-                        <label className="startRadio__box">
-                            <input type="radio" name="star1" value = "0.5" id=""/>
-                            <span className="startRadio__img"><span className="blind">별 0.5개</span></span>
-                        </label>
-                        <label className="startRadio__box">
-                            <input type="radio" name="star1" value = "1"id=""/>
-                            <span className="startRadio__img"><span className="blind">별 1개</span></span>
-                        </label>
-                        <label className="startRadio__box">
-                            <input type="radio" name="star1" value = "1.5"id=""/>
-                            <span className="startRadio__img"><span className="blind">별 1.5개</span></span>
-                        </label>
-                        <label className="startRadio__box">
-                            <input type="radio" name="star1" value = "2"id=""/>
-                            <span className="startRadio__img"><span className="blind">별 2개</span></span>
-                        </label>
-                        <label className="startRadio__box">
-                            <input type="radio" name="star1" value = "2.5" id=""/>
-                            <span className="startRadio__img"><span className="blind">별 2.5개</span></span>
-                        </label>
-                        <label className="startRadio__box">
-                            <input type="radio" name="star1" value = "3" id=""/>
-                            <span className="startRadio__img"><span className="blind">별 3개</span></span>
-                        </label>
-                        <label className="startRadio__box">
-                            <input type="radio" name="star1" value = "3.5" id=""/>
-                            <span className="startRadio__img"><span className="blind">별 3.5개</span></span>
-                        </label>
-                        <label className="startRadio__box">
-                            <input type="radio" name="star1" value = "4" id=""/>
-                            <span className="startRadio__img"><span className="blind">별 4개</span></span>
-                        </label>
-                        <label className="startRadio__box">
-                            <input type="radio" name="star1" value = "4.5" id=""/>
-                            <span className="startRadio__img"><span className="blind">별 4.5개</span></span>
-                        </label>
-                        <label className="startRadio__box">
-                            <input type="radio" name="star1" value = "5" id=""/>
-                            <span className="startRadio__img"><span className="blind">별 5개</span></span>
-                        </label>
-                        <input type = "submit" value = "submit" className = "btn" onClick ={function(event){
-                        console.log("click")
-
                         
-                    }}/>
-                        </div>
-                        </form>
                     </div>
                     
                     
@@ -221,62 +166,7 @@ const Test = () => {
                         지속시간 : {longevityRating2}<br/><br/>
                         베이스 노트 : {basenote2}<br/><br/>
                         미들 노트 : {middlenote2}<br/>
-                        <form
-                        onSubmit={function(event){
-                            event.preventDefault();
-                            console.log(event.target.star3.value);
-                            // setstar3(event.target);
-                            // handleSubmit(event);
-                        }}     
-                        >
-                        <div className="startRadio">
-                        <label className="startRadio__box">
-                            <input type="radio" name="star2" value = "0.5" id=""/>
-                            <span className="startRadio__img"><span className="blind">별 0.5개</span></span>
-                        </label>
-                        <label className="startRadio__box">
-                            <input type="radio" name="star2" value = "1"id=""/>
-                            <span className="startRadio__img"><span className="blind">별 1개</span></span>
-                        </label>
-                        <label className="startRadio__box">
-                            <input type="radio" name="star2" value = "1.5"id=""/>
-                            <span className="startRadio__img"><span className="blind">별 1.5개</span></span>
-                        </label>
-                        <label className="startRadio__box">
-                            <input type="radio" name="star2" value = "2"id=""/>
-                            <span className="startRadio__img"><span className="blind">별 2개</span></span>
-                        </label>
-                        <label className="startRadio__box">
-                            <input type="radio" name="star2" value = "2.5" id=""/>
-                            <span className="startRadio__img"><span className="blind">별 2.5개</span></span>
-                        </label>
-                        <label className="startRadio__box">
-                            <input type="radio" name="star2" value = "3" id=""/>
-                            <span className="startRadio__img"><span className="blind">별 3개</span></span>
-                        </label>
-                        <label className="startRadio__box">
-                            <input type="radio" name="star2" value = "3.5" id=""/>
-                            <span className="startRadio__img"><span className="blind">별 3.5개</span></span>
-                        </label>
-                        <label className="startRadio__box">
-                            <input type="radio" name="star2" value = "4" id=""/>
-                            <span className="startRadio__img"><span className="blind">별 4개</span></span>
-                        </label>
-                        <label className="startRadio__box">
-                            <input type="radio" name="star2" value = "4.5" id=""/>
-                            <span className="startRadio__img"><span className="blind">별 4.5개</span></span>
-                        </label>
-                        <label className="startRadio__box">
-                            <input type="radio" name="star2" value = "5" id=""/>
-                            <span className="startRadio__img"><span className="blind">별 5개</span></span>
-                        </label>
-                        <input type = "submit" value = "submit" className = "btn" onClick ={function(event){
-                        console.log("click")
-
                         
-                    }}/>
-                        </div>
-                        </form>
                     </div>
                     <div><a href={buyUrl2} target='_blank' class="buyPerfume">go</a></div>
                 </div>
@@ -299,7 +189,12 @@ const Test = () => {
                         지속시간 : {longevityRating3}<br/><br/>
                         베이스 노트 : {basenote3}<br/><br/>
                         미들 노트 : {middlenote3}<br/>
-                        <form
+                        
+                    </div>
+                    <div><a href={buyUrl3} target='_blank' class="buyPerfume">go</a></div>
+                </div>
+                <div className = "starrate">
+                <form
                         onSubmit={function(event){
                             event.preventDefault();
                             console.log(event.target.star3.value);
@@ -355,10 +250,7 @@ const Test = () => {
                     }}/>
                         </div>
                         </form>
-                    </div>
-                    <div><a href={buyUrl3} target='_blank' class="buyPerfume">go</a></div>
-                </div>
-                
+                        </div>
                 <div className="add_content">
                 <div className = "add_comment"> How about this kind of perfume?</div>
                 <br/>
