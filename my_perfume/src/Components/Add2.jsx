@@ -15,7 +15,7 @@ const Add2 = () =>{
   const [middlenote2, setmiddlenote2] = useState("");
   const [name2, setname2] = useState("");
   const [scent2, setscent2] = useState("");
-  const [concentration2, setconcentration2] = useState("");
+  const [longevityRating2, setlongevityRating2] = useState("");
   const [imageUrl2, seturl2] = useState("");
   const [rating2, setrating2] = useState("");
 
@@ -23,11 +23,11 @@ const Add2 = () =>{
   axios.get('/filtering?standard=3').then(response=>{
     console.log(response.data)
     setname2(response.data[1].name);
-    setbasenote2(response.data[1].base_note);
+    setbasenote2(response.data[1].baseNote);
     setbrand2(response.data[1].brand);
-    setmiddlenote2(response.data[1].middle_note);
-    setconcentration2(response.data[1].concentration);
-    seturl2(response.data[1].imgUrl);
+    setmiddlenote2(response.data[1].middleNote);
+    setlongevityRating2(response.data[1].longevityRating);
+    seturl2(response.data[1].imageUrl);
     setrating2(response.data[1].rating);
 
   })
@@ -49,7 +49,7 @@ const Add2 = () =>{
         <div className = "img2_im">
           이름 : {name2}<br/><br/>
           브랜드 : {brand2}<br/><br/>
-          밤낮 : {concentration2}<br/><br/>
+          지속시간 : {longevityRating2}<br/><br/>
           베이스 노트 : {basenote2}<br/><br/>
           미들 노트 : {middlenote2}<br/><br/>
           평점 : {rating2}<br/>

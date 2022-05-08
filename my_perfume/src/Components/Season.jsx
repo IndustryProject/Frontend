@@ -9,6 +9,40 @@ import {ProgressBar} from './ProgressBar.jsx';
 
 
 const Season = () =>{
+    let a = "result";
+
+    const [perfume_season, setseason] = useState();
+    const handleSubmit = event =>{
+        
+        //setprice(e.target.price.value);
+        //console.log(e.target.price.value);
+        
+        //console.log(perfume_pprice);
+        postdata(event);
+        postresult(a);
+        
+
+    };
+
+    const postresult = (props) => {
+        console.log("post",props);
+        const url = '/version3'
+       // console.log(JSON.stringify({price:perfume_price}))
+       
+       // axios.post(url,user, {header: {"Content-Type": 'application/json'}},{params:{adminIdx:1}}).then((response)=>console.log(response));
+       
+       axios.post(url
+    //     ,JSON.stringify({
+    //      price: props
+    //    })
+       ,
+       {
+         headers: 
+         {"Content-Type": 'application/json'}
+       }
+       ).then((response) => console.log(response));
+     };
+
     const postdata = (props) => {
         console.log("post",props);
         const url = 'pushSeason?seasonId='+props
@@ -31,7 +65,8 @@ const Season = () =>{
                     <Link to = "/analyzing">
                     <div className = "spring" onClick = {()=>{
                             console.log("spring")
-                            postdata(1)}}> 
+                            setseason(1);
+                            handleSubmit(1)}}> 
                     
                     </div>
                     </Link>
@@ -39,7 +74,8 @@ const Season = () =>{
                     <div className = "summer" 
                     onClick = {()=>{
                         console.log("summer")
-                        postdata(2)}}
+                        setseason(2);
+                        handleSubmit(2)}}
                     >
 
                     </div>
@@ -47,7 +83,8 @@ const Season = () =>{
                     <Link to = "/analyzing">
                     <div className = "autumn" onClick = {()=>{
                             console.log("autumn")
-                            postdata(3)}}
+                            setseason(3);
+                            handleSubmit(3)}}
                             >
 
                     </div>
@@ -55,7 +92,8 @@ const Season = () =>{
                     <Link to = "/analyzing">
                     <div className = "winter" onClick = {()=>{
                             console.log("winter")
-                            postdata(4)}}
+                            setseason(4);
+                            handleSubmit(4)}}
                             >
 
                     </div>
@@ -64,7 +102,8 @@ const Season = () =>{
                     <div className = "four_season"
                     onClick = {()=>{
                         console.log("four_season")
-                        postdata(5)}}
+                        setseason(5);
+                        handleSubmit(5)}}
                         >
 
                     </div>
