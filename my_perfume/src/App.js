@@ -11,7 +11,10 @@ import Test from './Components/Test';
 import Add from './Components/Add';
 import Add2 from './Components/Add2';
 import Weather from './Components/Weather';
+<<<<<<< HEAD
 import Season from './Components/Season';
+=======
+>>>>>>> dd5ace9e48ea53b249aa846e6d15ee2fb3d317d1
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import ProgressBar from './Components/ProgressBar';
 import './App.css';
@@ -49,7 +52,10 @@ function App() {
       <Route exact path="/add" element={<Add />} />
       <Route exact path="/add2" element={<Add2 />} />
       <Route exact path="/Weather" element={<Weather />} />
+<<<<<<< HEAD
       <Route exact path="/Season" element={<Season />} />
+=======
+>>>>>>> dd5ace9e48ea53b249aa846e6d15ee2fb3d317d1
       {/* <Route exact path="/ProgressBar" element={<ProgressBar />} /> */}
       
       </Routes>

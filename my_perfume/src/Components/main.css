@@ -152,9 +152,12 @@ button {
 }
 .btn-8 span:hover:after {
   width: 100%;
+<<<<<<< HEAD
 }
 .weather{
   margin: top 1%;
   float : right;
   margin-right:3%;
+=======
+>>>>>>> dd5ace9e48ea53b249aa846e6d15ee2fb3d317d1
 }
