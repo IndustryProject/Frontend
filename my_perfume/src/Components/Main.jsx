@@ -15,7 +15,6 @@ const Main = () =>{
         
         <div >
             
-           
             <div className = "main_title">PERFUME</div>
             <div className = "weather">
             <Weather/>

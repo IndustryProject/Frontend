@@ -67,3 +67,9 @@
   justify-content: center;
   margin-top : 40px;
 }
+
+.weather{
+  margin: top 1%;
+  float : right;
+  margin-right:2%;
+}

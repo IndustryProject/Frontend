@@ -2,37 +2,97 @@
     display: flex;
     justify-content: center;
 }
+
 .season_inner {
     width: 80%;
-  
-
-    border: solid 2px;
+    justify-content: center;
 }
+
+.q4 {
+    /* border: solid 2px; */
+    margin-top: 3%;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    align-items: center;
+    font-family: 'Do Hyeon', sans-serif, Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px gray;
+  }
+
+
 .spring{
-    border:solid 2px;
-    width: 150px;
-    height:150px;
+    width: 300px;
+    height: 350px;
+    text-decoration-line: none;
+}
+.spring_img{
+    border-radius: 70%;
 }
 .summer{
-    border:solid 2px;
-    width: 150px;
-    height:150px;
+    width: 300px;
+    height: 350px;
+    text-decoration-line: none;
+}
+.summer_img{
+    border-radius: 70%;
 }
 .autumn{
-    border:solid 2px;
-    width: 150px;
-    height:150px;
+    width: 300px;
+    height: 350px;
+    text-decoration-line: none;
+}
+.autumn_img{
+    border-radius: 70%;
 }
 .winter{
-    border:solid 2px;
-    width: 150px;
-    height:150px;
+    width: 300px;
+    height: 350px;
+    text-decoration-line: none;
+    margin-left: 70px;
+}
+.winter_img{
+    border-radius: 70%;
 }
 .four_season{
-    border:solid 2px;
-    width: 150px;
-    height:150px;
+    width: 300px;
+    height: 350px;
+    text-decoration-line: none;
+    margin-right: 50px;
 }
-.four{
-    justify-content: space-evenly;
+.four_season_img{
+    border-radius: 70%;
+}
+
+.pb {
+    display: flex;
+    justify-content: center;
+}
+
+.spring_img:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  }
+.summer_img:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.autumn_img:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.winter_img:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.four_season_img:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.weather{
+    display: flex;
+    margin: top 1%;
+    float : right;
+    margin-right:2%;
 }

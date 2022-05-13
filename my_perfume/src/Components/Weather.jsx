@@ -1,9 +1,26 @@
 import { useEffect, useState } from "react";
+import "./weather.css";
 
 const Weather = ()=>{
     const [coords, saveCoords] = useState();
     const [temp, setTemp] = useState();
     const [weather, setWeather] = useState();
+
+function weather_check(status){
+    if(status == "Clear"){
+        document.getElementsByClassName("weather-icon cloud").className = "weather-icon sun";
+    }
+    else if(status == "Clouds"){
+        document.getElementsByClassName("weather-icon sun").className = "weather-icon cloud";
+    }
+    else if(status == "Rain"){
+        document.getElementsByClassName("weather-icon sun").className = "weather-icon cloud";
+    }
+    else{
+        document.getElementsByClassName("weather-icon sun").className = "weather-icon sun";
+        document.getElementsByClassName("weather-icon cloud").className = "weather-icon sun";
+    }
+}
 
 function handleGeoSucc(position){
     console.log(position);
@@ -40,15 +57,20 @@ function getWeather(lat, lon){
 }
 useEffect(()=>{
     requestCoords();
+    weather_check(weather);
 }, []);
 
 return(
     <div>
-        
-        temp:{temp}
-
+        <div className="weather-wrapper">
+            <div className="weather-card madrid">
+                <div className="weather-icon sun"></div>
+                <h1>{temp}º /</h1>
+            </div>
+        </div>
+        {/*temp:{temp}
         <br/><br/>
-        weather:{weather}
+        weather:{weather}*/}
     </div>
 )
 
