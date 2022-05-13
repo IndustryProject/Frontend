@@ -2,11 +2,14 @@ import React, {useEffect, useState} from 'react';
 import "./firstquestion.css";
 import female from '../img/female.png';
 import male from '../img/male.png';
+import unisex from '../img/unisex.png';
 import {Link} from "react-router-dom"
 import axios from "axios";
 import {ProgressBar} from './ProgressBar.jsx';
+import Weather from "./Weather";
 const female_img = <img src={female} width= '100%' height='100%'/>;
 const male_img = <img src={male} width='100%' height='100%'/>;
+const unisex_img = <img src={unisex} width='100%' height='100%'/>;
 
 
 const Firstquestion = () =>{
@@ -34,9 +37,13 @@ const Firstquestion = () =>{
       };
     return (
         <div className= "q1_outer">
-            <div className = "q1_inner">
             
+            <div className = "q1_inner">
+                
                 <div className = "q1">Male or Female?</div>
+                <div className = "weather">
+                <Weather/>
+                </div>
                 <div className = "q1_content">
                 <Link to="/scent">
                 <div className = "female_img" onClick = {()=>{
@@ -58,12 +65,7 @@ const Firstquestion = () =>{
                     // console.log(fq)
                     postdata(3)
                 }}>
-                <img
-                src = "https://png.pngtree.com/png-vector/20191201/ourmid/pngtree-male-and-female-gender-signs-icon-circle-png-image_2060974.jpg"
-                width = "100%"
-                height = "100%"
-                >
-                </img>
+                {unisex_img}
                 </div>
                 </Link>
                 

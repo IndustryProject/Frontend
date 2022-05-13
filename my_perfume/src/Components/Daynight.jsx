@@ -3,6 +3,7 @@ import "./daynight.css";
 import {Link} from "react-router-dom";
 import axios from "axios";
 import {ProgressBar} from './ProgressBar.jsx';
+import Weather from "./Weather";
 const Daynight = () =>{
     const [time,setTime] = useState("");
     const handleClick = (k) =>{
@@ -28,6 +29,10 @@ const Daynight = () =>{
         <div className = "daynight_outer">
             <div className = "daynight_inner">
                 <div className = "q4">Day or Night?</div>
+                <div className = "weather">
+                <Weather/>
+                </div>
+                <br/>
                 <div className = "q4_content">
                 <Link to="/season">
                 <div className = "day_img" onClick = {()=>{
@@ -53,7 +58,7 @@ const Daynight = () =>{
                     postdata(2)
                 }}>
                 <img
-                src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY01_iQogJHyu1F5aGmpQs1h093bK-DJU15Q&usqp=CAU"
+                src = "https://cdn.pixabay.com/photo/2019/11/06/14/33/moon-4606246__340.jpg"
                 width = "100%"
                 height = "100%"
                 >

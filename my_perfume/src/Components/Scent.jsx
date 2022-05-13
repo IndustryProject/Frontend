@@ -3,6 +3,7 @@ import "./scent.css";
 import {Link} from "react-router-dom"
 import axios from "axios";
 import {ProgressBar} from './ProgressBar.jsx';
+import Weather from "./Weather";
 const Scent = () =>{
     const postdata = (props) => {
         console.log("post",props);
@@ -21,11 +22,19 @@ const Scent = () =>{
       };
     return(
         <div className = "scent_outer">
+            
             <div className = "scent_inner">
+                
                 <div className = "q2"> What kind of scent do you like? </div>
+                <div className = "weather">
+                <Weather/>
+                </div>
                 <div className = "q2_content">
+                <br/><br/><br/>
                 <div className ="content_1">
+               
                     <Link to = "/daynight">
+                    
                         <div className = "woody" onClick = {()=>{
                             console.log("woody")
                             postdata(1)
