@@ -25,7 +25,8 @@ const Season = () =>{
 
     const postresult = (props) => {
         console.log("post",props);
-        const url = '/version3'
+
+        const url = 'https://2kvx7bcsf5.execute-api.us-east-1.amazonaws.com/version1'
        // console.log(JSON.stringify({price:perfume_price}))
        
        // axios.post(url,user, {header: {"Content-Type": 'application/json'}},{params:{adminIdx:1}}).then((response)=>console.log(response));
@@ -44,7 +45,7 @@ const Season = () =>{
 
     const postdata = (props) => {
         console.log("post",props);
-        const url = 'pushSeason?seasonId='+props
+        const url = 'https://3.34.132.19/pushSeason?seasonId='+props
         // console.log(fq);
         // axios.post(url,user, {header: {"Content-Type": 'application/json'}},{params:{adminIdx:1}}).then((response)=>console.log(response));
         
