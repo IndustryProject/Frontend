@@ -20,7 +20,7 @@ const Add2 = () =>{
   const [rating2, setrating2] = useState("");
 
   useEffect(()=>{
-  axios.get('/filtering?standard=3').then(response=>{
+  axios.get('https://3.34.132.19/filtering?standard=3').then(response=>{
     console.log(response.data)
     setname2(response.data[1].name);
     setbasenote2(response.data[1].baseNote);

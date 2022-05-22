@@ -79,12 +79,12 @@ const Test = () => {
         // {/*'https://jsonplaceholder.typicode.com/users'*/}
         //     setUsers(response.data);
         // });
-        axios.get('/filtering?standard=2').then(response=>{
+        axios.get('https://3.34.132.19/filtering?standard=2').then(response=>{
             console.log(response.data)
             setaddimage1(response.data[0].imageUrl);
             setaddimage2(response.data[1].imageUrl);
         })
-        axios.get('/filtering?standard=1',
+        axios.get('https://3.34.132.19/filtering?standard=1',
         {
           headers:
           { 
