@@ -79,12 +79,12 @@ const Test = () => {
         // {/*'https://jsonplaceholder.typicode.com/users'*/}
         //     setUsers(response.data);
         // });
-        axios.get('https://3.34.132.19/filtering?standard=2').then(response=>{
+        axios.get('https://perfum.site/filtering?standard=2').then(response=>{
             console.log(response.data)
             setaddimage1(response.data[0].imageUrl);
             setaddimage2(response.data[1].imageUrl);
         })
-        axios.get('https://3.34.132.19/filtering?standard=1',
+        axios.get('https://perfum.site/filtering?standard=1',
         {
           headers:
           { 
@@ -144,7 +144,7 @@ const Test = () => {
                     
                     
                     
-                    <div><a href={buyUrl1} target='_blank' class="buyPerfume">go</a></div>
+                    <div><a href={buyUrl1} target='_blank' className="buyPerfume">go</a></div>
                 </div>
                 
                 <br/>
@@ -168,7 +168,7 @@ const Test = () => {
                         미들 노트 : {middlenote2}<br/>
                         
                     </div>
-                    <div><a href={buyUrl2} target='_blank' class="buyPerfume">go</a></div>
+                    <div><a href={buyUrl2} target='_blank' className="buyPerfume">go</a></div>
                 </div>
                 <br/>
                 <br/>
@@ -191,7 +191,7 @@ const Test = () => {
                         미들 노트 : {middlenote3}<br/>
                         
                     </div>
-                    <div><a href={buyUrl3} target='_blank' class="buyPerfume">go</a></div>
+                    <div><a href={buyUrl3} target='_blank' className="buyPerfume">go</a></div>
                 </div>
                 <div className = "starrate">
                 <form
@@ -303,8 +303,8 @@ const Test = () => {
                 </div>
                 </div>
                 <br/><br/>
-                <iframe className="iframe1" width="800" height="500" frameborder="1" scrolling="no" src="http://localhost:3000/add">로딩 불가 메세지</iframe>
-                <iframe className="iframe2" width="800" height="500" frameborder="1" scrolling="no" src="http://localhost:3000/add2">로딩 불가 메세지</iframe>
+                <iframe className="iframe1" width="800" height="500" frameBorder="1" scrolling="no" src="http://localhost:3000/add">로딩 불가 메세지</iframe>
+                <iframe className="iframe2" width="800" height="500" frameBorder="1" scrolling="no" src="http://localhost:3000/add2">로딩 불가 메세지</iframe>
                 <div className = "tohome_btn">
                 <Link to="/">
                 

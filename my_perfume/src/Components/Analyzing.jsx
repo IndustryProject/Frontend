@@ -13,7 +13,7 @@ const Analyzing = () =>{
         setTimeout(()=>{
             // setState()
             setReady(false)
-        },3000)
+        },7000)
     },[])
     return ready?<Loading/>:(
         <div className = "analyzing_outer">
