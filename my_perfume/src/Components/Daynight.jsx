@@ -11,7 +11,8 @@ const Daynight = () =>{
     }
     const postdata = (props) => {
         console.log("post",props);
-        const url = 'pushTimeScent?time='+props
+        // const url = 'https://3.34.132.19/pushTimeScent?time='+props
+        const url = 'https://perfum.site/pushTimeScent?time='+props
         // console.log(fq);
         // axios.post(url,user, {header: {"Content-Type": 'application/json'}},{params:{adminIdx:1}}).then((response)=>console.log(response));
         

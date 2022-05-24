@@ -12,7 +12,7 @@ const Add = () =>{
     const [imageUrl1, seturl1] = useState("");
     const [rating1, setrating1] = useState("");
     useEffect(()=>{
-    axios.get('/filtering?standard=3').then(response=>{
+    axios.get('https://perfum.site/filtering?standard=3').then(response=>{
       console.log(response.data)
       setname1(response.data[0].name);
       setbasenote1(response.data[0].baseNote);
