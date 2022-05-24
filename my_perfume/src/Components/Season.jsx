@@ -45,7 +45,8 @@ const Season = () =>{
 
     const postdata = (props) => {
         console.log("post",props);
-        const url = 'https://3.34.132.19/pushSeason?seasonId='+props
+        // const url = 'https://3.34.132.19/pushSeason?seasonId='+props
+        const url = 'https://perfum.site/pushSeason?seasonId='+props
         // console.log(fq);
         // axios.post(url,user, {header: {"Content-Type": 'application/json'}},{params:{adminIdx:1}}).then((response)=>console.log(response));
         
