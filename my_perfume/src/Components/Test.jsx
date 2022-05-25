@@ -4,9 +4,12 @@ import "./test.css";
 import {Link} from "react-router-dom";
 import axios from 'axios';
 import Imf from './Imf';
+import Weather from "./Weather";
 import greystar from '../img/greystar.jpg';
 import bluestar from '../img/bluestar.png';
+import ebay_icon from '../img/ebay_icon.png';
 const greystar_img = <img src={greystar}/>;
+const ebay = <img className="img-ebay" src={ebay_icon} width= '100%' height='100%'/>;
 
 
 
@@ -49,7 +52,7 @@ const Test = () => {
     const [brand1, setbrand1] = useState("");
     const [middlenote1, setmiddlenote1] = useState("");
     const [name1, setname1] = useState("");
-    const [scent1, setscent1] = useState("");
+    const [mainAccords1, setmainAccords1] = useState("");
     const [longevityRating1, setlongevityRating1] = useState("");
     const [imageUrl1, seturl1] = useState("");
     const [buyUrl1, setbuyurl1] = useState("");
@@ -57,7 +60,7 @@ const Test = () => {
     const [brand2, setbrand2] = useState("");
     const [middlenote2, setmiddlenote2] = useState("");
     const [name2, setname2] = useState("");
-    const [scent2, setscent2] = useState("");
+    const [mainAccords2, setmainAccords2] = useState("");
     const [longevityRating2, setlongevityRating2] = useState("");
     const [imageUrl2, seturl2] = useState("");
     const [buyUrl2, setbuyurl2] = useState("");
@@ -65,7 +68,7 @@ const Test = () => {
     const [brand3, setbrand3] = useState("");
     const [middlenote3, setmiddlenote3] = useState("");
     const [name3, setname3] = useState("");
-    const [scent3, setscent3] = useState("");
+    const [mainAccords3, setmainAccords3] = useState("");
     const [longevityRating3, setlongevityRating3] = useState("");
     const [imageUrl3, seturl3] = useState("");
     const [buyUrl3, setbuyurl3] = useState("");
@@ -101,6 +104,7 @@ const Test = () => {
             setlongevityRating1(response.data[0].longevityRating);
             seturl1(response.data[0].imageUrl);
             setbuyurl1(response.data[0].buyUrl);
+            setmainAccords1(response.data[0].mainAccords);
             setname2(response.data[1].name);
             setbasenote2(response.data[1].baseNote);
             setbrand2(response.data[1].brand);
@@ -108,6 +112,7 @@ const Test = () => {
             setlongevityRating2(response.data[1].longevityRating);
             seturl2(response.data[1].imageUrl);
             setbuyurl2(response.data[1].buyUrl);
+            setmainAccords2(response.data[1].mainAccords);
             setname3(response.data[2].name);
             setbasenote3(response.data[2].baseNote);
             setbrand3(response.data[2].brand);
@@ -115,12 +120,16 @@ const Test = () => {
             setlongevityRating3(response.data[2].longevityRating);
             seturl3(response.data[2].imageUrl);
             setbuyurl3(response.data[2].buyUrl);
+            setmainAccords3(response.data[2].mainAccords);
         });
     },[]);
     return(
         <div className = "test_outer">
             <div className = "test_inner">
                 <div className = "result">Perfume for you</div>
+                <div className = "weather">
+                <Weather/>
+                </div>
                 <div className = "test_all">
                 <div className = "no1">
                     <div className = "img1">
@@ -135,7 +144,7 @@ const Test = () => {
 
                     <div className = "img1_im">
                         이름 : {name1}<br/><br/>
-                        브랜드 : {brand1}<br/><br/>
+                        분위기 : {mainAccords1}<br/><br/>
                         지속시간 : {longevityRating1}<br/><br/>
                         베이스 노트 : {basenote1}<br/><br/>
                         미들 노트 : {middlenote1}<br/>
@@ -144,7 +153,7 @@ const Test = () => {
                     
                     
                     
-                    <div><a href={buyUrl1} target='_blank' className="buyPerfume">go</a></div>
+                    <div><a href={buyUrl1} target='_blank' className="buyPerfume">{ebay}</a></div>
                 </div>
                 
                 <br/>
@@ -162,13 +171,13 @@ const Test = () => {
                     </div>
                     <div className = "img2_im">
                         이름 : {name2}<br/><br/>
-                        브랜드 : {brand2}<br/><br/>
+                        분위기 : {mainAccords2}<br/><br/>
                         지속시간 : {longevityRating2}<br/><br/>
                         베이스 노트 : {basenote2}<br/><br/>
                         미들 노트 : {middlenote2}<br/>
                         
                     </div>
-                    <div><a href={buyUrl2} target='_blank' className="buyPerfume">go</a></div>
+                    <div><a href={buyUrl2} target='_blank' className="buyPerfume">{ebay}</a></div>
                 </div>
                 <br/>
                 <br/>
@@ -185,13 +194,13 @@ const Test = () => {
                     </div>
                     <div className = "img3_im">
                         이름 : {name3}<br/><br/>
-                        브랜드 : {brand3}<br/><br/>
+                        분위기 : {mainAccords3}<br/><br/>
                         지속시간 : {longevityRating3}<br/><br/>
                         베이스 노트 : {basenote3}<br/><br/>
                         미들 노트 : {middlenote3}<br/>
                         
                     </div>
-                    <div><a href={buyUrl3} target='_blank' className="buyPerfume">go</a></div>
+                    <div><a href={buyUrl3} target='_blank' className="buyPerfume">{ebay}</a></div>
                 </div>
                 <div className = "starrate">
                 <form
