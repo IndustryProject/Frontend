@@ -153,7 +153,7 @@ const Test = () => {
                     
                     
                     
-                    <div><a href={buyUrl1} target='_blank' className="buyPerfume">{ebay}</a></div>
+                    <div><a href={buyUrl1} target='_blank' className="buyPerfume">{ebay}<a className="buyp">구매하러 가기</a></a></div>
                 </div>
                 
                 <br/>
@@ -177,7 +177,7 @@ const Test = () => {
                         미들 노트 : {middlenote2}<br/>
                         
                     </div>
-                    <div><a href={buyUrl2} target='_blank' className="buyPerfume">{ebay}</a></div>
+                    <div><a href={buyUrl2} target='_blank' className="buyPerfume">{ebay}<a className="buyp">구매하러 가기</a></a></div>
                 </div>
                 <br/>
                 <br/>
@@ -200,7 +200,7 @@ const Test = () => {
                         미들 노트 : {middlenote3}<br/>
                         
                     </div>
-                    <div><a href={buyUrl3} target='_blank' className="buyPerfume">{ebay}</a></div>
+                    <div><a href={buyUrl3} target='_blank' className="buyPerfume">{ebay}<a className="buyp">구매하러 가기</a></a></div>
                 </div>
                 <div className = "starrate">
                 <form
