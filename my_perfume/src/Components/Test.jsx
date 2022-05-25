@@ -303,8 +303,8 @@ const Test = () => {
                 </div>
                 </div>
                 <br/><br/>
-                <iframe className="iframe1" width="800" height="500" frameBorder="1" scrolling="no" src="http://localhost:3000/add">로딩 불가 메세지</iframe>
-                <iframe className="iframe2" width="800" height="500" frameBorder="1" scrolling="no" src="http://localhost:3000/add2">로딩 불가 메세지</iframe>
+                <iframe className="iframe1" width="800" height="500" frameBorder="1" scrolling="no" src="https://perfummme.com/add">로딩 불가 메세지</iframe>
+                <iframe className="iframe2" width="800" height="500" frameBorder="1" scrolling="no" src="https://perfummme.com/add2">로딩 불가 메세지</iframe>
                 <div className = "tohome_btn">
                 <Link to="/">
                 

@@ -30,8 +30,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "aws s3 sync ./build s3://perfume0430 --profile=howon",
-    "invalidate": "aws cloudfront create-invalidation --profil=howon --distribution-id E1MROGA5WTV00Y --paths /*"
+    "deploy": "aws s3 sync build/ s3://perfummme --profile=howon",
+    "invalidate": "aws cloudfront create-invalidation --profil=howon --distribution-id EEWY8YBF8RAFD --paths /*"
   },
   "eslintConfig": {
     "extends": [
