@@ -9,6 +9,7 @@
   width:75%;
 
 }
+
 .no2{
   margin:auto;
   display: flex;
@@ -40,7 +41,7 @@
   width:250px;
   height:250px;
   align : left;
-  margin-left : 13%;
+  margin-left : 11%;
   
   /* margin-left:20%; */
   
@@ -63,7 +64,7 @@
   width:250px;
   height:250px;
   align : left;
-  margin-left : 13%;
+  margin-left : 11%;
   /* margin-left:20%; */
   
 }
@@ -80,7 +81,7 @@
   width:250px;
   height:250px;
   align : left;
-  margin-left : 13%;
+  margin-left : 11%;
   /* margin-left:20%; */
   
   
@@ -111,7 +112,7 @@ html {
 }
 
 .tohome_btn{
-  margin-top:50px;
+  margin-top:10px;
 }
 .add1:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
@@ -230,7 +231,7 @@ html {
 .buyPerfume{
   margin-top: 100px;
   /*margin-left: 200px;*/
-  right: 15%;
+  right: 17%;
   position: absolute;
   display: flex;
   float: right;

@@ -6,10 +6,13 @@ import Loading from './Loading.jsx';
 import {ProgressBar} from './ProgressBar.jsx';
 import Weather from "./Weather";
 
-
+export let pp="false";
 
 const Season = () =>{
     let a = "result";
+    
+
+
     const [perfume_season, setseason] = useState();
     const handleSubmit = event =>{
         
@@ -25,7 +28,7 @@ const Season = () =>{
 
     const postresult = (props) => {
         console.log("post",props);
-
+        
         const url = 'https://2kvx7bcsf5.execute-api.us-east-1.amazonaws.com/version1'
        // console.log(JSON.stringify({price:perfume_price}))
        
@@ -40,7 +43,12 @@ const Season = () =>{
          headers: 
          {"Content-Type": 'application/json'}
        }
-       ).then((response) => console.log(response));
+       )
+         .then((response) => console.log(response))
+        
+         
+         
+       ;
      };
 
     const postdata = (props) => {
@@ -158,5 +166,6 @@ const Season = () =>{
         </div>
     )
 }
+
 
 export default Season;
