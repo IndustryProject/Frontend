@@ -37,7 +37,7 @@ const Daynight = () =>{
                 <div className = "q4_content">
                 <Link to="/season">
                 <div className = "day_img" onClick = {()=>{
-                    setTimeout(()=>console.log("delay"),1000)
+                    // setTimeout(()=>console.log("delay"),1000)
                     console.log("day")
                     // handleClick("day")
                     postdata(1)

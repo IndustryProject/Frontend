@@ -14,6 +14,23 @@ const ebay = <img className="img-ebay" src={ebay_icon} width= '100%' height='100
 
 
 const Test = () => {
+    const postdata = (props) => {
+        console.log("post",props);
+        
+        // console.log(fq);
+        // axios.post(url,user, {header: {"Content-Type": 'application/json'}},{params:{adminIdx:1}}).then((response)=>console.log(response));
+        const url = 'https://perfum.site/rating?rating='+props
+        // const url = 'https://3.34.132.19/pushGender?gender=1';
+        
+        axios.patch(url,JSON.stringify({
+          rate: props
+        }),
+        {
+          headers: 
+          {"Content-Type": 'application/json'}
+        }
+        ).then((response) => console.log(response));
+      };
     let addCheck1 = "off"
     let addCheck2 = "off"
     const add = (num) =>{
@@ -153,7 +170,7 @@ const Test = () => {
                     
                     
                     
-                    <div><a href={buyUrl1} target='_blank' className="buyPerfume">{ebay}<a className="buyp">구매하러 가기</a></a></div>
+                    <div className><a href={buyUrl1} target='_blank' className="buyPerfume">{ebay}<a className="buyp">구매하러 가기</a></a></div>
                 </div>
                 
                 <br/>
@@ -206,7 +223,10 @@ const Test = () => {
                 <form
                         onSubmit={function(event){
                             event.preventDefault();
+                            alert('당신의 평가가 저희의 추천시스템에 반영되었습니다 감사합니다');
                             console.log(event.target.star3.value);
+                            postdata(event.target.star3.value);
+                            
                             // setstar3(event.target);
                             // handleSubmit(event);
                         }}     
@@ -254,7 +274,7 @@ const Test = () => {
                         </label>
                         <input type = "submit" value = "submit" className = "btn" onClick ={function(event){
                         console.log("click")
-
+                        // alert('당신의 평가가 저희의 추천시스템에 반영되었습니다 감사합니다');
                         
                     }}/>
                         </div>

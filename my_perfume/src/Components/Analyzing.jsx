@@ -4,16 +4,21 @@ import {Link} from "react-router-dom";
 import Loading from './Loading.jsx';
 import {ProgressBar} from './ProgressBar.jsx';
 import analyzing from '../img/analyzing.jpg';
+
+
 const analyzing_img = <img src={analyzing} width= '40%' height="auto"/>;
 
 
 const Analyzing = () =>{
     const [ready, setReady] = useState(true);
+
+
+
     useEffect(()=>{
         setTimeout(()=>{
             // setState()
             setReady(false)
-        },9000)
+        },11000)
     },[])
     return ready?<Loading/>:(
         <div className = "analyzing_outer">
