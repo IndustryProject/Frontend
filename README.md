@@ -19,11 +19,12 @@ _더 많은 예제와 사용법은 [Wiki][wiki]를 참고하세요._
 
 ## 개발 환경 설정
 
-모든 개발 의존성 설치 방법과 자동 테스트 슈트 실행 방법을 운영체제 별로 작성합니다.
+npm을 설치 합니다
+npm을 실행 합니다
 
 ```sh
-make install
-npm test
+npm install
+npm run start
 ```
 
 ## 업데이트 내역
