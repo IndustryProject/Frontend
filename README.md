@@ -7,24 +7,9 @@
 
 한 두 문단으로 프로젝트 소개 글을 작성합니다.
 
-
-
 <img width="80%" src="https://user-images.githubusercontent.com/75923078/172031281-ab959e29-f21b-4389-9236-d83aa05dac94.JPG"/>
 
 
-## 설치 방법
-
-OS X & 리눅스:
-
-```sh
-npm install my-crazy-module --save
-```
-
-윈도우:
-
-```sh
-edit autoexec.bat
-```
 
 ## 사용 예제
 
