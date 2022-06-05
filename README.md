@@ -48,7 +48,7 @@ npm run start
 
 XYZ 라이센스를 준수하며 ``LICENSE``에서 자세한 정보를 확인할 수 있습니다.
 
-[https://github.com/yourname/github-link](https://github.com/howon-ryu/Frontend)
+[https://github.com/howon-ryu/Frontend](https://github.com/howon-ryu/Frontend)
 
 ## 기여 방법
 
