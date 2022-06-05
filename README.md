@@ -9,6 +9,8 @@
 
 ![per](https://user-images.githubusercontent.com/75923078/172031281-ab959e29-f21b-4389-9236-d83aa05dac94.JPG)
 <img src="https://user-images.githubusercontent.com/75923078/172031281-ab959e29-f21b-4389-9236-d83aa05dac94.JPG"  width="700" height="370" />
+<img width="80%" src="https://user-images.githubusercontent.com/75923078/172031281-ab959e29-f21b-4389-9236-d83aa05dac94.JPG"/>
+
 
 ## 설치 방법
 
