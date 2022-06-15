@@ -18,9 +18,10 @@ const Analyzing = () =>{
         setTimeout(()=>{
             // setState()
             setReady(false)
-        },11000)
+        },1000)
     },[])
-    return ready?<Loading/>:(
+    //return ready?<Loading/>:(
+    return (
         <div className = "analyzing_outer">
             <div className = "analyzing_inner">
                 <div className = "analyzing_title">Result Analysis Completed</div>

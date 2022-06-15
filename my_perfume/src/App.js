@@ -6,6 +6,7 @@ import Scent from './Components/Scent';
 import Price from './Components/Price.jsx';
 import Daynight from './Components/Daynight';
 import Blank from './Components/Blank';
+import Loading from './Components/Loading';
 import Analyzing from './Components/Analyzing';
 import Test from './Components/Test';
 import Add from './Components/Add';
@@ -45,11 +46,12 @@ function App() {
       <Route exact path="/analyzing" element={<Analyzing />} />
       <Route exact path="/result" element={<Result />} />
       <Route exact path="/test" element={<Test />} />
-      <Route exact path="/" element={<Main />} />
+
       <Route exact path="/add" element={<Add />} />
       <Route exact path="/add2" element={<Add2 />} />
       <Route exact path="/Weather" element={<Weather />} />
       <Route exact path="/Season" element={<Season />} />
+      <Route exact path="/Loading" element={<Loading />} />
       {/* <Route exact path="/ProgressBar" element={<ProgressBar />} /> */}
       
       </Routes>
