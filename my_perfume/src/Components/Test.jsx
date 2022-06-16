@@ -4,13 +4,33 @@ import "./test.css";
 import {Link} from "react-router-dom";
 import axios from 'axios';
 import Imf from './Imf';
+import Weather from "./Weather";
 import greystar from '../img/greystar.jpg';
 import bluestar from '../img/bluestar.png';
+import ebay_icon from '../img/ebay_icon.png';
 const greystar_img = <img src={greystar}/>;
+const ebay = <img className="img-ebay" src={ebay_icon} width= '100%' height='100%'/>;
 
 
 
 const Test = () => {
+    const postdata = (props) => {
+        console.log("post",props);
+        
+        // console.log(fq);
+        // axios.post(url,user, {header: {"Content-Type": 'application/json'}},{params:{adminIdx:1}}).then((response)=>console.log(response));
+        const url = 'https://perfum.site/rating?rating='+props
+        // const url = 'https://3.34.132.19/pushGender?gender=1';
+        
+        axios.patch(url,JSON.stringify({
+          rate: props
+        }),
+        {
+          headers: 
+          {"Content-Type": 'application/json'}
+        }
+        ).then((response) => console.log(response));
+      };
     let addCheck1 = "off"
     let addCheck2 = "off"
     const add = (num) =>{
@@ -49,7 +69,7 @@ const Test = () => {
     const [brand1, setbrand1] = useState("");
     const [middlenote1, setmiddlenote1] = useState("");
     const [name1, setname1] = useState("");
-    const [scent1, setscent1] = useState("");
+    const [mainAccords1, setmainAccords1] = useState("");
     const [longevityRating1, setlongevityRating1] = useState("");
     const [imageUrl1, seturl1] = useState("");
     const [buyUrl1, setbuyurl1] = useState("");
@@ -57,7 +77,7 @@ const Test = () => {
     const [brand2, setbrand2] = useState("");
     const [middlenote2, setmiddlenote2] = useState("");
     const [name2, setname2] = useState("");
-    const [scent2, setscent2] = useState("");
+    const [mainAccords2, setmainAccords2] = useState("");
     const [longevityRating2, setlongevityRating2] = useState("");
     const [imageUrl2, seturl2] = useState("");
     const [buyUrl2, setbuyurl2] = useState("");
@@ -65,7 +85,7 @@ const Test = () => {
     const [brand3, setbrand3] = useState("");
     const [middlenote3, setmiddlenote3] = useState("");
     const [name3, setname3] = useState("");
-    const [scent3, setscent3] = useState("");
+    const [mainAccords3, setmainAccords3] = useState("");
     const [longevityRating3, setlongevityRating3] = useState("");
     const [imageUrl3, seturl3] = useState("");
     const [buyUrl3, setbuyurl3] = useState("");
@@ -79,12 +99,12 @@ const Test = () => {
         // {/*'https://jsonplaceholder.typicode.com/users'*/}
         //     setUsers(response.data);
         // });
-        axios.get('https://3.34.132.19/filtering?standard=2').then(response=>{
+        axios.get('https://perfum.site/filtering?standard=2').then(response=>{
             console.log(response.data)
             setaddimage1(response.data[0].imageUrl);
             setaddimage2(response.data[1].imageUrl);
         })
-        axios.get('https://3.34.132.19/filtering?standard=1',
+        axios.get('https://perfum.site/filtering?standard=1',
         {
           headers:
           { 
@@ -101,6 +121,7 @@ const Test = () => {
             setlongevityRating1(response.data[0].longevityRating);
             seturl1(response.data[0].imageUrl);
             setbuyurl1(response.data[0].buyUrl);
+            setmainAccords1(response.data[0].mainAccords);
             setname2(response.data[1].name);
             setbasenote2(response.data[1].baseNote);
             setbrand2(response.data[1].brand);
@@ -108,6 +129,7 @@ const Test = () => {
             setlongevityRating2(response.data[1].longevityRating);
             seturl2(response.data[1].imageUrl);
             setbuyurl2(response.data[1].buyUrl);
+            setmainAccords2(response.data[1].mainAccords);
             setname3(response.data[2].name);
             setbasenote3(response.data[2].baseNote);
             setbrand3(response.data[2].brand);
@@ -115,12 +137,16 @@ const Test = () => {
             setlongevityRating3(response.data[2].longevityRating);
             seturl3(response.data[2].imageUrl);
             setbuyurl3(response.data[2].buyUrl);
+            setmainAccords3(response.data[2].mainAccords);
         });
     },[]);
     return(
         <div className = "test_outer">
             <div className = "test_inner">
                 <div className = "result">Perfume for you</div>
+                <div className = "weather">
+                <Weather/>
+                </div>
                 <div className = "test_all">
                 <div className = "no1">
                     <div className = "img1">
@@ -135,7 +161,7 @@ const Test = () => {
 
                     <div className = "img1_im">
                         이름 : {name1}<br/><br/>
-                        브랜드 : {brand1}<br/><br/>
+                        분위기 : {mainAccords1}<br/><br/>
                         지속시간 : {longevityRating1}<br/><br/>
                         베이스 노트 : {basenote1}<br/><br/>
                         미들 노트 : {middlenote1}<br/>
@@ -144,7 +170,7 @@ const Test = () => {
                     
                     
                     
-                    <div><a href={buyUrl1} target='_blank' class="buyPerfume">go</a></div>
+                    <div className><a href={buyUrl1} target='_blank' className="buyPerfume">{ebay}<a className="buyp">구매하러 가기</a></a></div>
                 </div>
                 
                 <br/>
@@ -162,13 +188,13 @@ const Test = () => {
                     </div>
                     <div className = "img2_im">
                         이름 : {name2}<br/><br/>
-                        브랜드 : {brand2}<br/><br/>
+                        분위기 : {mainAccords2}<br/><br/>
                         지속시간 : {longevityRating2}<br/><br/>
                         베이스 노트 : {basenote2}<br/><br/>
                         미들 노트 : {middlenote2}<br/>
                         
                     </div>
-                    <div><a href={buyUrl2} target='_blank' class="buyPerfume">go</a></div>
+                    <div><a href={buyUrl2} target='_blank' className="buyPerfume">{ebay}<a className="buyp">구매하러 가기</a></a></div>
                 </div>
                 <br/>
                 <br/>
@@ -185,19 +211,22 @@ const Test = () => {
                     </div>
                     <div className = "img3_im">
                         이름 : {name3}<br/><br/>
-                        브랜드 : {brand3}<br/><br/>
+                        분위기 : {mainAccords3}<br/><br/>
                         지속시간 : {longevityRating3}<br/><br/>
                         베이스 노트 : {basenote3}<br/><br/>
                         미들 노트 : {middlenote3}<br/>
                         
                     </div>
-                    <div><a href={buyUrl3} target='_blank' class="buyPerfume">go</a></div>
+                    <div><a href={buyUrl3} target='_blank' className="buyPerfume">{ebay}<a className="buyp">구매하러 가기</a></a></div>
                 </div>
                 <div className = "starrate">
                 <form
                         onSubmit={function(event){
                             event.preventDefault();
+                            alert('당신의 평가가 저희의 추천시스템에 반영되었습니다 감사합니다');
                             console.log(event.target.star3.value);
+                            postdata(event.target.star3.value);
+                            
                             // setstar3(event.target);
                             // handleSubmit(event);
                         }}     
@@ -245,7 +274,7 @@ const Test = () => {
                         </label>
                         <input type = "submit" value = "submit" className = "btn" onClick ={function(event){
                         console.log("click")
-
+                        // alert('당신의 평가가 저희의 추천시스템에 반영되었습니다 감사합니다');
                         
                     }}/>
                         </div>
@@ -303,8 +332,8 @@ const Test = () => {
                 </div>
                 </div>
                 <br/><br/>
-                <iframe className="iframe1" width="800" height="500" frameborder="1" scrolling="no" src="http://localhost:3000/add">로딩 불가 메세지</iframe>
-                <iframe className="iframe2" width="800" height="500" frameborder="1" scrolling="no" src="http://localhost:3000/add2">로딩 불가 메세지</iframe>
+                <iframe className="iframe1" width="800" height="500" frameBorder="1" scrolling="no" src="https://perfummme.com/add">로딩 불가 메세지</iframe>
+                <iframe className="iframe2" width="800" height="500" frameBorder="1" scrolling="no" src="https://perfummme.com/add2">로딩 불가 메세지</iframe>
                 <div className = "tohome_btn">
                 <Link to="/">
                 

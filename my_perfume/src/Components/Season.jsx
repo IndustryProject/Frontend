@@ -1,15 +1,26 @@
-import React, { useEffect , useState} from 'react';
+import React, { useEffect , useState,useRef} from 'react';
 import "./season.css";
 import {Link} from "react-router-dom";
 import axios from "axios";
 import Loading from './Loading.jsx';
 import {ProgressBar} from './ProgressBar.jsx';
 import Weather from "./Weather";
-
-
+import {useNavigate} from "react-router-dom"
+export let pp="false";
 
 const Season = () =>{
     let a = "result";
+    const navigate = useNavigate();
+    const nav = (props)=>{
+      //navigate("/analyzing")
+      if(props!=null)
+      {
+      
+      navigate("/analyzing");
+      }
+  }
+
+
     const [perfume_season, setseason] = useState();
     const handleSubmit = event =>{
         
@@ -25,8 +36,8 @@ const Season = () =>{
 
     const postresult = (props) => {
         console.log("post",props);
-
-        const url = 'https://2kvx7bcsf5.execute-api.us-east-1.amazonaws.com/version1'
+        
+        let url = 'https://2kvx7bcsf5.execute-api.us-east-1.amazonaws.com/version1'
        // console.log(JSON.stringify({price:perfume_price}))
        
        // axios.post(url,user, {header: {"Content-Type": 'application/json'}},{params:{adminIdx:1}}).then((response)=>console.log(response));
@@ -40,12 +51,22 @@ const Season = () =>{
          headers: 
          {"Content-Type": 'application/json'}
        }
-       ).then((response) => console.log(response));
+       )
+        //.then((response) => console.log(response))
+
+        .then((response)=> nav(response))
+        
+ 
+        
+         
+         
+       ;
      };
 
     const postdata = (props) => {
         console.log("post",props);
-        const url = 'https://3.34.132.19/pushSeason?seasonId='+props
+        // const url = 'https://3.34.132.19/pushSeason?seasonId='+props
+        const url = 'https://perfum.site/pushSeason?seasonId='+props
         // console.log(fq);
         // axios.post(url,user, {header: {"Content-Type": 'application/json'}},{params:{adminIdx:1}}).then((response)=>console.log(response));
         
@@ -68,7 +89,7 @@ const Season = () =>{
                 <div className="q2_content">
                 <div className ="content_1">
 
-                  <Link to = "/analyzing">
+                  <Link to = "/Loading"> 
                     <div className = "spring" onClick = {()=>{
                             console.log("spring")
                             setseason(1);
@@ -83,7 +104,7 @@ const Season = () =>{
                       spring
                     </div>
                   </Link>
-                  <Link to = "/analyzing">
+                  <Link to = "/Loading">
                     <div className = "summer" 
                     onClick = {()=>{
                         console.log("summer")
@@ -99,7 +120,7 @@ const Season = () =>{
                       summer
                     </div>
                   </Link>
-                  <Link to = "/analyzing">
+                  <Link to = "/Loading">
                     <div className = "autumn" onClick = {()=>{
                             console.log("autumn")
                             setseason(3);
@@ -116,7 +137,7 @@ const Season = () =>{
                   </Link>
                 </div>
                 <div className ="content_2">
-                  <Link to = "/analyzing">
+                  <Link to = "/Loading">
                     <div className = "winter" onClick = {()=>{
                             console.log("winter")
                             setseason(4);
@@ -131,7 +152,7 @@ const Season = () =>{
                       winter
                     </div>
                   </Link>
-                  <Link to = "/analyzing">
+                  <Link to = "/Loading">
                     <div className = "four_season"
                     onClick = {()=>{
                         console.log("four_season")
@@ -157,5 +178,6 @@ const Season = () =>{
         </div>
     )
 }
+
 
 export default Season;

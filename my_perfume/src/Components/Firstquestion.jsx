@@ -25,8 +25,9 @@ const Firstquestion = () =>{
         setfq(fq === props);
         // console.log(fq);
         // axios.post(url,user, {header: {"Content-Type": 'application/json'}},{params:{adminIdx:1}}).then((response)=>console.log(response));
-        // const url = 'pushGender?gender='+props
-        const url = 'https://3.34.132.19/pushGender?gender=1';
+        const url = 'https://perfum.site/pushGender?gender='+props
+        // const url = 'https://3.34.132.19/pushGender?gender=1';
+        
         axios.post(url,JSON.stringify({
           gender: props
         }),

@@ -7,12 +7,12 @@ const Add = () =>{
     const [brand1, setbrand1] = useState("");
     const [middlenote1, setmiddlenote1] = useState("");
     const [name1, setname1] = useState("");
-    const [scent1, setscent1] = useState("");
+    const [mainAccords1, setmainAccords1] = useState("");
     const [longevityRating1, setlongevityRating1] = useState("");
     const [imageUrl1, seturl1] = useState("");
     const [rating1, setrating1] = useState("");
     useEffect(()=>{
-    axios.get('https://3.34.132.19/filtering?standard=3').then(response=>{
+    axios.get('https://perfum.site/filtering?standard=3').then(response=>{
       console.log(response.data)
       setname1(response.data[0].name);
       setbasenote1(response.data[0].baseNote);
@@ -21,6 +21,7 @@ const Add = () =>{
       setlongevityRating1(response.data[0].longevityRating);
       seturl1(response.data[0].imageUrl);
       setrating1(response.data[0].rating);
+      setmainAccords1(response.data[0].mainAccords);
     })
     },[]);
     return (
@@ -39,11 +40,10 @@ const Add = () =>{
 
           <div className = "img1_im">
             이름 : {name1}<br/><br/>
-            브랜드 : {brand1}<br/><br/>
+            분위기 : {mainAccords1}<br/><br/>
             지속시간 : {longevityRating1}<br/><br/>
             베이스 노트 : {basenote1}<br/><br/>
             미들 노트 : {middlenote1}<br/><br/>
-            평점 : {rating1}<br/>
           </div>
         </div>
         

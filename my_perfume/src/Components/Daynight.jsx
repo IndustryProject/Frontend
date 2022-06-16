@@ -11,8 +11,8 @@ const Daynight = () =>{
     }
     const postdata = (props) => {
         console.log("post",props);
-        const url = 'https://3.34.132.19/pushTimeScent?time='+props
-        
+        // const url = 'https://3.34.132.19/pushTimeScent?time='+props
+        const url = 'https://perfum.site/pushTimeScent?time='+props
         // console.log(fq);
         // axios.post(url,user, {header: {"Content-Type": 'application/json'}},{params:{adminIdx:1}}).then((response)=>console.log(response));
         
@@ -37,7 +37,7 @@ const Daynight = () =>{
                 <div className = "q4_content">
                 <Link to="/season">
                 <div className = "day_img" onClick = {()=>{
-                    setTimeout(()=>console.log("delay"),1000)
+                    // setTimeout(()=>console.log("delay"),1000)
                     console.log("day")
                     // handleClick("day")
                     postdata(1)
